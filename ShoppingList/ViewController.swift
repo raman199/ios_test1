@@ -4,38 +4,41 @@
 //
 //  Created by mac on 2019-10-16.
 //  Copyright © 2019 Centennial College. All rights reserved.
-//
+//  File name : SHOPPING LIST
+//  Author's name : RAMANDEEP KAUR
+//  Student ID : 301088232
+//  Date : 16 OCT 2019
 
 import UIKit
 
 class ViewController: UIViewController {
 
-   
+   // OUTLETS FOR ITEMS
     @IBOutlet weak var item6: UITextField!
     @IBOutlet weak var item5: UITextField!
     @IBOutlet weak var item4: UITextField!
     @IBOutlet weak var item3: UITextField!
     @IBOutlet weak var item2: UITextField!
     @IBOutlet weak var item1: UITextField!
-    @IBOutlet weak var qty1: UILabel!
-    
-    @IBOutlet weak var qty2: UILabel!
 
+    // OUTLETS FOR QTY LABEL
+
+    @IBOutlet weak var qty1: UILabel!
+    @IBOutlet weak var qty2: UILabel!
     @IBOutlet weak var qty3: UILabel!
-    
     @IBOutlet weak var qty6: UILabel!
     @IBOutlet weak var qty5: UILabel!
     @IBOutlet weak var qty4: UILabel!
     
-    
+    // OUTLETS FOR STEPPERS
     @IBOutlet weak var stepper6: UIStepper!
     @IBOutlet weak var stepper5: UIStepper!
     @IBOutlet weak var stepper4: UIStepper!
     @IBOutlet weak var stepper3: UIStepper!
     @IBOutlet weak var stepper1: UIStepper!
-    
     @IBOutlet weak var stepper2: UIStepper!
     
+    // FUNCTION TO INCREASE DECRESE QTY VALUE
     @IBAction func myStepperAction(_ sender: Any) {
         qty1.text = String(stepper1.value)
         }
@@ -64,20 +67,25 @@ class ViewController: UIViewController {
 
     }
     
+    // CANCEL BUTTON TO RESET TEXTFIELD
     @IBAction func cancelButton(_ sender: Any) {
+        
+        //RESETTING STEPPER VALUE TO ZERO
         stepper1.value = 0
         stepper2.value = 0
         stepper3.value = 0
         stepper4.value = 0
         stepper5.value = 0
         stepper6.value = 0
-
+       // RESETTING QTY VALUE TO 0
         qty1.text = "0"
         qty2.text = "0"
         qty3.text = "0"
         qty4.text = "0"
         qty5.text = "0"
         qty6.text = "0"
+        
+        // RESETING ITEM TEXTFIELD TO BLANK
         item1.text = ""
         item2.text = ""
         item3.text = ""
