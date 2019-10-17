@@ -65,6 +65,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cancelButton(_ sender: Any) {
+        stepper1.value = 0
+        stepper2.value = 0
+        stepper3.value = 0
+        stepper4.value = 0
+        stepper5.value = 0
+        stepper6.value = 0
+
         qty1.text = "0"
         qty2.text = "0"
         qty3.text = "0"
